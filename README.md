@@ -26,11 +26,11 @@ O projeto aplica o padrão **Strategy** para isolar o comportamento de cada dia 
 
 **1. Como evitar verificações repetidas de valores nulos no código principal?**
 
-Garantindo que o seletor **nunca retorne `null`**. Sempre que um dia for inválido ou não encontrado, ele retorna a `EstrategiaNula`, que possui o mesmo contrato dos outros. O código principal chama `executar()` sem precisar verificar se o objeto existe.
+Garantindo que o seletor nunca retorne `null`. Sempre que um dia for inválido ou não encontrado, ele retorna a `EstrategiaNula`, que possui o mesmo contrato dos outros. O código principal chama `executar()` sem precisar verificar se o objeto existe.
 
 **2. Qual padrão de projeto representa a ausência de uma estratégia de forma segura?**
 
-O padrão **Null Object**. Em vez de retornar `null`, retorna-se um objeto concreto que implementa a mesma interface, mas sem lancar erros.
+O padrão Null Object. Em vez de retornar `null`, retorna-se um objeto concreto que implementa a mesma interface, mas sem lancar erros.
 
 **3. Como esse padrão foi incorporado à solução?**
 
@@ -44,6 +44,9 @@ Ana
 quarta-feira
 quarta-feira
 
+
+
+-------------------------Saida--------------------- 
 Usuário: Ana
 Dia consultado: quarta-feira
 Prioridade: MEDIA
@@ -56,6 +59,9 @@ Carlos
 sexta-feira
 funday
 
+
+
+-------------------------Saida---------------------
 Usuário: Carlos
 Dia consultado: funday
 Prioridade: BAIXA
